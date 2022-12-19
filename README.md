@@ -1,4 +1,4 @@
-# Fullstack Example with Next.js (REST API)
+# Fullstack Example with Next.js and Prisma
 
 > Modified form [Prisma Examples](https://github.com/prisma/prisma-examples/tree/latest/typescript/rest-nextjs-api-routes)
 
