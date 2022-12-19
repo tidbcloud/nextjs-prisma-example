@@ -10,7 +10,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "prisma:deploy": "prisma migrate deploy",
+    "prisma:deploy": "prisma migrate dev",
     "netlify-build": "[ -z \"$DATABASE_URL\" ] && npm run build || (npm run prisma:deploy && npm run build)"
   },
   "dependencies": {
