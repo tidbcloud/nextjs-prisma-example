@@ -13,13 +13,13 @@ This example shows how to implement a **fullstack app in TypeScript with [Next.j
 
 ### 1. Get connection details
 
-1. Navigate to your TiDB Serverless cluster's dashboard.
+1. Navigate to your TiDB Cloud Serverless cluster's dashboard.
 2. Get **Endpoint**, **Port** and **User** field from the Connection tab.
-3. Build your DATABASE_URL string: `mysql://<User>:<Password>@<Endpoint>:<Port>/bookshop`
+3. Build your DATABASE_URL string: `mysql://<User>:<Password>@<Endpoint>:<Port>/rest_nextjs?sslaccept=strict`
 
 ![image](https://user-images.githubusercontent.com/35677990/202609001-ecf07f3d-a7a3-4376-9b7d-54f4096aaec6.jpg)
 
-You will use this DATABASE_URL string to connect to TiDB Serverless cluster later.
+You will use this DATABASE_URL string to connect to TiDB Cloud Serverless cluster later.
 
 ### 2. Deploy on your workspace
 
@@ -40,15 +40,20 @@ You will use this DATABASE_URL string to connect to TiDB Serverless cluster late
    ````shell
    prisma migrate dev
    ````
-5. Start the project.
+5. Start the app.
    ```shell
    npm run dev
    ```
+
+🎉 Mission Completes.
+
+The app is now running, navigate to http://localhost:3000/ in your browser to explore its UI.
 
 </details>
 
 <details>
   <summary><h2>Deploy on Netlify</h2></summary>
+
 ### 🧑‍🍳 Before We Start
 
 1. Create a [TiDB Cloud](https://tidbcloud.com/) account and get your free trial cluster.
@@ -58,11 +63,11 @@ You will use this DATABASE_URL string to connect to TiDB Serverless cluster late
 
 1. Navigate to your TiDB Serverless cluster's dashboard.
 2. Get **Endpoint**, **Port** and **User** field from the Connection tab.
-3. Build your DATABASE_URL string: `mysql://<User>:<Password>@<Endpoint>:<Port>/bookshop`
+3. Build your DATABASE_URL string: `mysql://<User>:<Password>@<Endpoint>:<Port>/rest_nextjs?sslaccept=strict`
 
 ![image](https://user-images.githubusercontent.com/35677990/202609001-ecf07f3d-a7a3-4376-9b7d-54f4096aaec6.jpg)
 
-You will use this DATABASE_URL string to connect to TiDB Serverless cluster later.
+You will use this DATABASE_URL string to connect to TiDB Cloud Serverless cluster later.
 
 ### 2. Deploy on Netlify
 
