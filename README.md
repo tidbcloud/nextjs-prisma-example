@@ -38,7 +38,7 @@ You will use this DATABASE_URL string to connect to TiDB Cloud Serverless cluste
    ```
 4. Migrate your database.
    ````shell
-   prisma migrate dev
+   npx prisma migrate dev
    ````
 5. Start the app.
    ```shell
