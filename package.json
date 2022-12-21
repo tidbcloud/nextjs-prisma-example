@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "prisma:deploy": "prisma migrate dev",
-    "netlify-build": "[ -z \"$DATABASE_URL\" ] && npm run build || (npm run prisma:deploy && npm run build)"
+    "netlify-build": "npm run prisma:deploy && npm run build"
   },
   "dependencies": {
     "@prisma/client": "4.7.1",
