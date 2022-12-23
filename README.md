@@ -78,7 +78,7 @@ The **Deploy to Netlify** button will take you to Netlify's deployment page. The
 1. Click the **Deploy to Netlify** button.
 2. Click **Connect to GitHub** and authenticate GitHub account.
 3. Fill in **Repository name** for your own GitHub repository.
-4. Enter the DATABASE_URL string, set in the previous step, in the **Set database URL** field.
+4. Enter the DATABASE_URL string, get in the previous step, in the **Set database URL** field.
 5. Click **Save & Deploy**.
 
 ![img](https://user-images.githubusercontent.com/35677990/208869376-c642e816-cb74-4012-9070-9a2cc301b72e.jpg)
@@ -97,21 +97,28 @@ Now wait for the deployment to complete, then you can view your site on the defa
 1. Create a [TiDB Cloud](https://tidbcloud.com/) account and get your free trial cluster.
 2. Create a [Vercel](https://vercel.com/signup) account.
 
-### Deploy on Vercel
+### 1. Get connection details
+
+1. Navigate to your TiDB Serverless cluster's dashboard.
+2. Get **Endpoint**, **Port** and **User** field from the Connection tab.
+3. Build your DATABASE_URL string: `mysql://<User>:<Password>@<Endpoint>:<Port>/rest_nextjs?sslaccept=strict`
+
+![image](https://user-images.githubusercontent.com/35677990/202609001-ecf07f3d-a7a3-4376-9b7d-54f4096aaec6.jpg)
+
+You will use this DATABASE_URL string to connect to TiDB Cloud Serverless cluster later.
+
+### 2. Deploy on Vercel
 
 The **Deploy** button will take you through Vercel's project creation flow. Vercel will help to clone this job to your own GitHub repository and automatically deploy it.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=nextjs-prisma-example&repository-url=https%3A%2F%2Fgithub.com%2Ftidbcloud%2Fnextjs-prisma-example&integration-ids=oac_coKBVWCXNjJnCEth1zzKoF1j)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=nextjs-prisma-example&repository-url=https%3A%2F%2Fgithub.com%2Ftidbcloud%2Fnextjs-prisma-example&env=DATABASE_URL&envDescription=TiDB%20Cloud%20connection%20string)
 
 1. Click the **Deploy** button.
 2. Click **GitHub** button and authenticate GitHub account.
 3. Select your **Git Scope** and fill in **Repository Name** for your own GitHub repository.
 4. Click **Create** to create the git repository.
-5. Click **Add** to activate the integration procedures.
-6. In the integration window, choose **Prisma** framework and the cluster you created.
-7. Click **Add Integration and Return to Vercel**.
-
-![image](https://user-images.githubusercontent.com/3690895/209358866-29fd564d-97d0-47bb-a7e7-c62e04db30c1.png)
+5. Enter the DATABASE_URL string, get in the previous step, in the **Value** field.
+6. Click **Deploy**.
 
 🎉 Mission Completes.
 
