@@ -5,12 +5,12 @@ const prisma = new PrismaClient()
 const userData: Prisma.UserCreateInput[] = [
   {
     name: 'Alice',
-    email: 'alice@prisma.io',
+    email: 'alice@pingcap.com',
     posts: {
       create: [
         {
-          title: 'Join the Prisma Slack',
-          content: 'https://slack.prisma.io',
+          title: 'Join the TiDB Cloud',
+          content: 'https://www.pingcap.com/tidb-cloud',
           published: true,
         },
       ],
@@ -18,12 +18,12 @@ const userData: Prisma.UserCreateInput[] = [
   },
   {
     name: 'Nilu',
-    email: 'nilu@prisma.io',
+    email: 'nilu@pingcap.com',
     posts: {
       create: [
         {
-          title: 'Follow Prisma on Twitter',
-          content: 'https://www.twitter.com/prisma',
+          title: 'Follow PingCAP on Twitter',
+          content: 'https://twitter.com/PingCAP',
           published: true,
         },
       ],
@@ -31,17 +31,17 @@ const userData: Prisma.UserCreateInput[] = [
   },
   {
     name: 'Mahmoud',
-    email: 'mahmoud@prisma.io',
+    email: 'mahmoud@pingcap.com',
     posts: {
       create: [
         {
-          title: 'Ask a question about Prisma on GitHub',
-          content: 'https://www.github.com/prisma/prisma/discussions',
+          title: 'Ask a question on our Forums',
+          content: 'https://internals.tidb.io',
           published: true,
         },
         {
-          title: 'Prisma on YouTube',
-          content: 'https://pris.ly/youtube',
+          title: 'TiDB on GitHub',
+          content: 'https://github.com/pingcap/tidb',
         },
       ],
     },
